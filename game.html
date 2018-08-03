@@ -2,6 +2,7 @@
 Sciduck was here! <b> This text is thick </b> and
 <i> this text is slanted </i> and this text is normal.
 
+<p>https://www.udemy.com/code-your-first-game</p>
 
 <canvas id= "gameCanvas" width="800" height="600"></canvas>
 
@@ -15,21 +16,21 @@ Sciduck was here! <b> This text is thick </b> and
       canvas = document.getElementById('gameCanvas');
       canvasContext = canvas.getContext('2d');
 
-      setInterval(drawEverything, 1000);
-      
+      setInterval(drawEverything, 500);
+
   }
 
   function drawEverything() {
-    ballX = ballX + 10;
+    ballX = ballX + 5;
 
     console.log(ballX)
-    console.log("called drawEverything");
+    //console.log("called drawEverything");
     canvasContext.fillStyle = 'black';
     canvasContext.fillRect(0,0,canvas.width,canvas.height);
     canvasContext.fillStyle = 'white';
     canvasContext.fillRect(225,210,200,200);
     cavasContext.fillStyle = 'red';
-    canvasContext.fillRect(ballX,200,50,25);
+    canvasContext.fillRect(ballX,100,10,10);
   }
 
 </script>
