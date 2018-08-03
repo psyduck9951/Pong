@@ -1,5 +1,5 @@
 <html>
-Saad Seth was here! <b> This text is thick </b> and
+Sciduck was here! <b> This text is thick </b> and
 <i> this text is slanted </i> and this text is normal.
 
 
@@ -8,19 +8,28 @@ Saad Seth was here! <b> This text is thick </b> and
 <script>
   var canvas;
   var canvasContext;
+  var ballX = 50;
 
   window.onload = function() {
       console.log("Hello World!");
       canvas = document.getElementById('gameCanvas');
       canvasContext = canvas.getContext('2d');
+
+      setInterval(drawEverything, 1000);
+      
   }
+
   function drawEverything() {
+    ballX = ballX + 10;
+
+    console.log(ballX)
+    console.log("called drawEverything");
     canvasContext.fillStyle = 'black';
     canvasContext.fillRect(0,0,canvas.width,canvas.height);
     canvasContext.fillStyle = 'white';
     canvasContext.fillRect(225,210,200,200);
     cavasContext.fillStyle = 'red';
-    canvasContext.fillRect(canvas.width/2,200,50,25)
+    canvasContext.fillRect(ballX,200,50,25);
   }
 
 </script>
